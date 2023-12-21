@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-graphql = "==2.0.1"
+graphene = "==2.1.9"
+graphene-sqlalchemy = "==2.3.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
