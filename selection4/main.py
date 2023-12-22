@@ -33,8 +33,8 @@ class JobObject(ObjectType):
     employer = Field(lambda: EmployerObject) 
     
     def resolve_employer(root, info):
-        return [employer for employer in employers_data if employer["id"] == root["employer_id"]][0]
-        # return next(employer for employer in employers_data if employer["id"] == root["employer_id"])
+        # return [employer for employer in employers_data if employer["id"] == root["employer_id"]][0]
+        return next(employer for employer in employers_data if employer["id"] == root["employer_id"])
     
 
 class Query(ObjectType):
